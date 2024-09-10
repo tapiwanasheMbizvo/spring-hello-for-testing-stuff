@@ -21,6 +21,7 @@ public class HelloWorld {
         Greeting greeting = new Greeting();
         greeting.setGreeting("Hello Kind Stranger");
         greeting.setLocalDateTime(LocalDateTime.now());
+        greeting.setMessage("We gon be alright!");
         return  ResponseEntity.ok(greeting);
     }
     

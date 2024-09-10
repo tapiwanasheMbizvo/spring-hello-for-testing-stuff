@@ -6,13 +6,15 @@ public class Greeting {
     
     private String greeting;
     private LocalDateTime localDateTime;
+    private String message;
 
     public Greeting() {
     }
 
-    public Greeting(String greeting, LocalDateTime localDateTime) {
+    public Greeting(String greeting, LocalDateTime localDateTime, String messString) {
         this.greeting = greeting;
         this.localDateTime = localDateTime;
+        this.message = messString;
     }
 
 
@@ -32,11 +34,21 @@ public class Greeting {
         this.localDateTime = localDateTime;
     }
 
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     @Override
     public String toString() {
         return "{" +
             " greeting='" + getGreeting() + "'" +
             ", localDateTime='" + getLocalDateTime() + "'" +
+            ", message='" + getMessage() + "'" +
             "}";
     }
 
